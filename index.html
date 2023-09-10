@@ -17,22 +17,32 @@
 <body>
     <nav>
         <div class="main-nav container flex">
-            <a href="#" class="logo">
+            <a href="#" onclick="window.location.reload()" class="logo">
                 <img src="assets/images/logo.png" alt="logo">
             </a>
             <section class="nav-links">
                 <ul class="flex">
-                    <li class="hover-link nav-item">World Affairs</li>
-                    <li class="hover-link nav-item">Top Headlines</li>
-                    <li class="hover-link nav-item">Technology</li>
-                    <li class="hover-link nav-item">Indian Politics</li>
-                    <li class="hover-link nav-item">Sports</li>
-                    <li class="hover-link nav-item">Entertainment</li>
+                    <li class="hover-link nav-item" id="nav1" onclick="search('World Politics India', true, 'nav1')">
+                        World
+                        Affairs
+                    </li>
+                    <li class="hover-link nav-item" id="nav2" onclick="search('Top Headlines', true, 'nav2')">Top
+                        Headlines
+                    </li>
+                    <li class="hover-link nav-item" id="nav3" onclick="search('Technology', true, 'nav3')">Technology
+                    </li>
+                    <li class="hover-link nav-item" id="nav4" onclick="search('Indian Politics', true, 'nav4')">
+                        Indian
+                        Politics</li>
+                    <li class="hover-link nav-item" id="nav5" onclick="search('Sports', true, 'nav5')">Sports</li>
+                    <li class="hover-link nav-item" id="nav6" onclick="search('Entertainment', true, 'nav6')">
+                        Entertainment
+                    </li>
                 </ul>
             </section>
             <section class="search-bar flex">
-                <input type="text" class="user-input" placeholder="e.g. Government">
-                <button class="search-button">Search</button>
+                <input type="text" class="user-input" id="user-input" placeholder="e.g. Government">
+                <button class="search-button" id="search-button">Search</button>
             </section>
         </div>
     </nav>
@@ -44,7 +54,8 @@
     <template id="template-news-card">
         <div class="card">
             <div class="card-header">
-                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img"
+                    onerror="this.src='assets/images/default_image.png'">
             </div>
             <div class="card-content">
                 <h3 id="news-title">This is some random Title</h3>

@@ -76,6 +76,10 @@ nav {
     color: red;
 }
 
+.hover-link.active {
+    color: var(--accent-color);
+}
+
 .search-bar {
     height: 50px;
     gap: 8px;
